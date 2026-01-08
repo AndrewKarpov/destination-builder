@@ -1,0 +1,15 @@
+:root {
+  /* Colors */
+  --achromatic-white: #FFFFFF;
+
+  --gray-50: #F6F8FA;
+  --gray-200: #D3D8DC;
+  --gray-900: #060E1E;
+
+  --info-500: #3982EF;
+  --info-800: #1C4AAc;
+
+  /* Spacing */
+  --space-200: 0.5rem;
+  --space-400: 1rem;
+}

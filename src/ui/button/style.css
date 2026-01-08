@@ -1,0 +1,59 @@
+[data-ui-button] {
+  /* Default style = Primary  Medium*/
+  --button-background-color: var(--info-500);
+  --button-hover-background-color: var(--info-800);
+  --button-border-color: var(--info-500);
+  --button-color: var(--achromatic-white);
+  --button-border-radius: 6px;
+  --button-v-padding: var(--space-200);
+  --button-h-padding: var(--space-400);
+  --button-gap: 6px;
+
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--button-gap);
+  padding: var(--button-v-padding) var(--button-h-padding);
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+  border: 1px solid;
+  border-color: var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  transition: all 0.2s ease;
+}
+
+[data-ui-button]:hover,
+[data-ui-button]:active,
+[data-ui-button]:focus-visible {
+  background-color: var(--button-hover-background-color);
+}
+
+/* Variants */
+[data-ui-button][data-ui-button-variant="v-secondary"] {
+  --button-background-color: var(--achromatic-white);
+  --button-hover-background-color: var(--gray-50);
+  --button-color: var(--gray-900);
+  --button-border-color: var(--gray-200);
+}
+
+[data-ui-button][data-ui-button-variant="v-tertiary"] {
+  --button-background-color: var(--gray-50);
+  --button-hover-background-color: var(--gray-200);
+  --button-color: var(--gray-900);
+  --button-border-color: transparent;
+  --button-v-padding: 12px;
+  --button-h-padding: 12px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+[data-ui-button]:disabled {
+  cursor: unset;
+  --button-background-color: var(--gray-50);
+  --button-hover-background-color: var(--gray-50);
+  --button-color: var(--gray-200);
+  --button-border-color: var(--gray-200);
+}

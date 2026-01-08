@@ -1,0 +1,6 @@
+@import "./styles/tokens.css";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
