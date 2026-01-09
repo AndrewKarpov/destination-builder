@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# Destination Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript application for configuring data destination providers using Vite.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/        # React components (forms, wizards, storage)
+├── providers/         # Provider configuration, schema, and URL utilities
+├── ui/               # Reusable UI components (button, input, select, field)
+├── custom/           # Custom components (secret input)
+├── styles/           # Global styles (reset, design tokens)
+├── api/              # Backend integration (mock backend)
+└── main.tsx          # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Install dependencies: `npm install`
+2. Start dev server: `npm run dev`
+3. Build: `npm run build`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Key Features
+
+- Provider wizard for guided setup
+- Form-based provider configuration
+- Secret input handling
+- Storage container management
+- Responsive UI with design tokens
+
+ ## Providers Module
+ * This module manages data providers for the destination builder application.
+ * It handles configuration, schema definitions, and URL generation for various data sources.
+
+ # Files
+  - `config.ts` - Provider configuration settings and initialization
+  - `schema.ts` - Data schema definitions for provider validation
+  - `url.ts` - URL generation and manipulation utilities for providers
+ # Adding a New Provider
+ To add a new provider, follow these steps:
+ 
+ 1. **Update `schema.ts`**
+    - Define the schema/interface for your new provider's configuration
+    - Include all required and optional fields for the provider
+ 2. **Update `config.ts`**
+    - Add the provider configuration object with default values
+    - Register the new provider in the provider factory
+ 3. **Update `url.ts`**
+    - Add URL generation/formatting logic for the new provider
+    - Handle provider-specific URL construction patterns
+ # Usage
+ * Providers are loaded through the configuration module and can be accessed
+ * throughout the application via their registered identifiers.

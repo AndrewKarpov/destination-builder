@@ -1,0 +1,20 @@
+[data-ui-field] {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+}
+
+[data-ui-field-label] {
+  cursor: pointer;
+}
+
+[data-ui-field-label]:has([data-ui-field-label-text]) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+}
+
+[data-ui-field-error] {
+  color: var(--danger-500);
+}

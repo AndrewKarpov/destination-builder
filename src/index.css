@@ -1,6 +1,7 @@
-@import "./styles/tokens.css";
+@import './styles/reset.css';
+@import './styles/tokens.css';
 
-:root {
+#root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  box-sizing: border-box;
+  padding: 20px;
 }

@@ -1,15 +1,25 @@
 :root {
   /* Colors */
-  --achromatic-white: #FFFFFF;
+  --achromatic-white: #ffffff;
 
-  --gray-50: #F6F8FA;
-  --gray-200: #D3D8DC;
-  --gray-900: #060E1E;
+  --gray-50: #f6f8fa;
+  --gray-200: #d3d8dc;
+  --gray-900: #060e1e;
 
-  --info-500: #3982EF;
-  --info-800: #1C4AAc;
+  --info-500: #3982ef;
+  --info-800: #1c4aac;
+
+  --danger-500: #e03e2f;
 
   /* Spacing */
   --space-200: 0.5rem;
+  --space-300: 0.75rem;
   --space-400: 1rem;
+
+  /* Font */
+  --font-size-small: 0.75rem;
+  --font-size-medium: 0.875rem;
+  --font-size-large: 1rem;
+  --font-weight-light: 400;
+  --font-weight-regular: 500;
 }

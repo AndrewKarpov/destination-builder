@@ -1,0 +1,17 @@
+[data-ui-typo='body'] {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: 1.375;
+}
+
+[data-ui-typo='body'][data-ui-typo-size='small'] {
+  font-size: var(--font-size-small);
+}
+
+[data-ui-typo='body'][data-ui-typo-size='large'] {
+  font-size: var(--font-size-large);
+}
+
+[data-ui-typo='body'][data-ui-typo-weight='light'] {
+  font-weight: var(--font-weight-light);
+}

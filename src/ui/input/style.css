@@ -1,0 +1,27 @@
+[data-ui-input-wrapper] {
+  border: 1.2px solid var(--gray-200);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+[data-ui-input] {
+  padding: var(--space-200) var(--space-300);
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  order: 0;
+}
+
+[data-ui-input-wrapper]:has([data-ui-input]:user-invalid),
+[data-ui-input-wrapper]:has([data-ui-input][aria-invalid='true']) {
+  border-color: var(--danger-500);
+}
+
+[data-ui-input-trailing] {
+  order: 1;
+  display: flex;
+  align-items: center;
+  padding-right: var(--space-300);
+}
